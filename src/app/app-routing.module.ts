@@ -1,10 +1,18 @@
 import { RouterModule, Routes } from '@angular/router';
 
+import { HomePageComponent } from '@modules/home/page/home-page/home-page.component';
 import { NgModule } from '@angular/core';
 
 const routes: Routes = [{
-  path: "", // Todo
-  loadChildren : () => import('./modules/home/home.module').then(m => m.HomeModule)
+  path: 'auth', 
+  loadChildren : () => import('@modules/auth/auth.module').then(m => m.AuthModule)
+},
+  {
+    path: '', 
+    component: HomePageComponent, 
+    loadChildren:()=> import('@modules/home/home.module').then(m => m.HomeModule)
+
+    
 }];
 
 @NgModule({
