@@ -1,9 +1,22 @@
 import { RouterModule, Routes } from '@angular/router';
 
-import { HomePageComponent } from './page/home-page/home-page.component';
 import { NgModule } from '@angular/core';
 
-const routes: Routes = [{path:'', component:HomePageComponent}];
+const routes: Routes = [ {
+  path: 'tracks', 
+  loadChildren: () => import('@modules/tracks/tracks.module').then(m => m.TracksModule) 
+},
+  {
+    path: 'history', 
+    loadChildren:() => import('@modules/history/history.module').then(m => m.HistoryModule)
+  }, 
+  {
+    path: 'favorites', 
+    loadChildren: () => import('@modules/favorites/favorites.module').then(m => m.FavoritesModule )
+    
+  }
+
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
