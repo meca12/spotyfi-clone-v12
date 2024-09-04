@@ -1,9 +1,8 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { TracksRoutingModule } from './tracks-routing.module';
+import { NgModule } from '@angular/core';
+import { SharedModule } from '@shared/shared.module';
 import { TracksPageComponent } from './tracks-page/tracks-page.component';
-
+import { TracksRoutingModule } from './tracks-routing.module';
 
 @NgModule({
   declarations: [
@@ -11,7 +10,8 @@ import { TracksPageComponent } from './tracks-page/tracks-page.component';
   ],
   imports: [
     CommonModule,
-    TracksRoutingModule
+    TracksRoutingModule,
+    SharedModule
   ]
 })
 export class TracksModule { }
