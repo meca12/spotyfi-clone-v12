@@ -1,21 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TracksPageComponent } from './tracks-page.component';
+import { SectionGenericComponent } from './section-generic.component';
 
-describe('TracksPageComponent', () => {
-  let component: TracksPageComponent;
-  let fixture: ComponentFixture<TracksPageComponent>;
- 
+describe('SectionGenericComponent', () => {
+  let component: SectionGenericComponent;
+  let fixture: ComponentFixture<SectionGenericComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TracksPageComponent ]
+      declarations: [ SectionGenericComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TracksPageComponent);
+    fixture = TestBed.createComponent(SectionGenericComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
