@@ -25,18 +25,18 @@ export class SidebarComponent implements OnInit {
       {
         name: 'Home',
         icon: 'uil uil-estate',
-        link: ['/', 'auth'],
+         router: ['/', 'auth'],
       },
       {
         name: 'Buscar',
         icon: 'uil uil-search',
-        link: ['/', 'history'],
+       router: ['/', 'history'],
       },
       {
         name: 'Tu biblioteca',
         icon: 'uil uil-chart',
         router: ['/', 'favorites'],
-        query: { hola: 'mundo' }
+        
       }]; 
         this.mainMenu.accessLink = [
       {
